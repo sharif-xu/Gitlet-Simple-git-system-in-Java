@@ -1,6 +1,7 @@
 This is Project #3 for CS61B Spring2020, without skeleton code. **Only for Educational use!**  Do not copy even for due days😊, Believe in yourself. You can make it.🦾🦾🦾
 
-[Design Document]: gitlet-design.md	"Design Document here"
+Design Document here:
+[Design Document]: gitlet-design.md	""
 
 In this project you'll be implementing a version-control system that mimics some of the basic features of the popular system Git. Ours is smaller and simpler, however, so we have named it Gitlet.
 
