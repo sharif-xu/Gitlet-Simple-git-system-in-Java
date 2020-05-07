@@ -1,0 +1,29 @@
+# Check that global-log prints out commits that are no longer in any branch.
+I setup2.inc
++ h.txt wug.txt
+> add h.txt
+<<<
+> commit "Add h"
+<<<
+> log
+${COMMIT_LOG}
+${COMMIT_LOG}
+${COMMIT_LOG}
+<<<*
+D L1 "${1}"
+D L2 "${2}"
+D L3 "${3}"
+> log
+===
+${COMMIT_HEAD}
+Add h
+
+===
+${COMMIT_HEAD}${ARBLINES}
+<<<*
+D ID "${2}"
+> reset ${ID}
+<<<
+> global-log
+${ARBLINES}${L1}?${ARBLINES}
+<<<*

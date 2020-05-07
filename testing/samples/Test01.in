@@ -1,0 +1,22 @@
+# Test add, commit, find, log
+I setup2.inc
+> branch mytest
+<<<
+> log
+${COMMIT_LOG}
+${COMMIT_LOG}
+<<<*
+D L1 "${1}"
+D L2 "${2}"
+> log
+===
+${COMMIT_HEAD}
+Two files
+
+===
+${COMMIT_HEAD}${ARBLINES}
+<<<*
+D FINDID "${2}"
+> find "initial commit"
+${FINDID}
+<<<*

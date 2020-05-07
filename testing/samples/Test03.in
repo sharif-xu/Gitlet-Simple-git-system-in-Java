@@ -1,0 +1,30 @@
+#test branch
+I setup2.inc
+> branch mytest
+<<<
+> rm f.txt
+<<<
++ b.txt c.txt
+> add b.txt
+<<<
+> commit "remove f.txt and add b.txt"
+<<<
+* f.txt
+> checkout mytest
+<<<
+> branch mytest2
+<<<
++ c.txt b.txt
+> add c.txt
+<<<
+> commit "add c.txt"
+<<<
+> checkout master
+<<<
+= b.txt c.txt
+= g.txt notwug.txt
+* f.txt
+> merge mytest
+<<<
+= g.txt notwug.txt
+* f.txt
